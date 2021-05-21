@@ -1,0 +1,80 @@
+<html lang='en'>
+<head>
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="../static/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../static/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../static/favicon-16x16.png">
+  <link rel="manifest" href="../static/site.webmanifest">
+  <link rel="mask-icon" href="../static/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="HandheldFriendly" content="true">
+  
+  <meta charset='utf-8'>
+  <link rel='stylesheet' href='../static/style.css'>
+  <script src='../static/client.js'></script>
+      
+</head>
+<body>
+<div>
+  <div class='center'>
+      <center>
+          <img src ="https://camo.githubusercontent.com/96dda742b62d5f6c19dfa1d2f23bc852822e3542/68747470733a2f2f63733132352e63732e696c6c696e6f69732e6564752f696d672f6c6f676f732f63733132352d776974682d626f726465722d313230783132302e706e67" >
+      </center>
+    <div class='title'>Not Geoff 👨🏼‍🏫🖥️</div>
+    <!-- <p>
+      Use images of <strong>Goeff</strong>, or images of other people that are <strong>Not Geoff</strong>.
+    </p>
+    <div class='content'>
+      <div class='no-display'>
+        <input id='file-input'
+               class='no-display'
+               type='file'
+               name='file'
+               accept='image/*'
+               onchange='showPicked(this)'>
+      </div> -->
+      <!-- <button class='choose-file-button' type='button' onclick='showPicker()'>Select Image</button>
+      <div class='upload-label'>
+        <label id='upload-label'>No file chosen</label>
+      </div>
+      <div>
+        <img id='image-picked' class='no-display' alt='Chosen Image' height='200'>
+      </div>
+      <div class='analyze'>
+        <button id='analyze-button' class='analyze-button' type='button' onclick='analyze()'>Analyze</button>
+      </div>
+      <div class='result-label'>
+        <label id='result-label'></label>
+      </div> -->
+      <p>
+        Looks like you're offline. Please connect to the internet and try again.
+      </p>
+    </div>
+  </div>
+</div>
+<script>
+  // This is the "Offline page" service worker
+
+  // Add this below content to your HTML page, or add the js file to your page at the very top to register service worker
+
+  // Check compatibility for the browser we're running this in
+  if ("serviceWorker" in navigator) {
+    if (navigator.serviceWorker.controller) {
+      console.log("[PWA Builder] active service worker found, no need to register");
+    } else {
+      // Register the service worker
+      navigator.serviceWorker
+        .register("./pwabuilder-sw.js")
+        .then(function (reg) {
+          console.log("[PWA Builder] Service worker has been registered for scope: " + reg.scope);
+        });
+    }
+  }
+</script>
+</body>
+</html>
