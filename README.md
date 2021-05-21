@@ -7,3 +7,6 @@ The app is deployed on a cloud service called [Render](https://render.com/). Due
 The important source code can be found under the `app/static` directory. This is what is served from render. The backend code can be found at `app/server.py`.
 
 The neural net was trained using [fastai](https://docs.fast.ai/). We do not plan to release the training script at this time.
+
+## Video Demonstration
+https://www.youtube.com/watch?v=2YkyK2o2jxo
